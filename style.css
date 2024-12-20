@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    height: 100vh;
+    background: #e6f2ff; /* Light blue background */
+    overflow: hidden;
+}
+
+/* Side Panel */
+.side-panel {
+    width: 80px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #003366, #0059b3);
+    color: #fff;
+    position: relative;
+    transition: width 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.side-panel.expanded {
+    width: 250px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    background: #003366;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00bfff;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1) translateY(-50%);
+}
+
+/* Top Section */
+.top-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.top-section h2 {
+    font-size: 1.2rem;
+}
+
+/* Middle Section */
+.middle-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.middle-section ul {
+    list-style: none;
+}
+
+.middle-section li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 10px 0;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.middle-section li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.middle-section .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.middle-section li:hover .icon {
+    transform: rotate(10deg);
+}
+
+.middle-section .text {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.side-panel.expanded .middle-section .text {
+    display: inline;
+    opacity: 1;
+}
+
+/* Bottom Section */
+.bottom-section {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: #f5faff;
+    color: #333;
+}
