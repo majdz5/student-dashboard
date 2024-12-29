@@ -10,11 +10,11 @@
 
 /* All Variables Needed */
 :root {
-    --primary-color: #708fe4; 
+    --primary-color: hwb(224 39% 0%); 
     --secondary-color: #4f76ea; 
-    --accent-color: #1749c8; 
+    --accent-color: #bec7e0; 
     --background-color: #d9d9f2; 
-    --text-color: #3c2f9b; 
+    --text-color: #180f5e; 
     --primary-font: 'Quantify', sans-serif; 
 }  
 .dark-mode{
@@ -36,6 +36,56 @@
     font-style: normal;
     font-display: swap;
 }
+ /* Dark mode Toggle */
+
+ .modetogcontainer{
+  
+  position: fixed;
+  width: 2rem;  
+  height: 2rem;
+  background-color: var(--text-color);
+  color: var(--background-color);
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+
+ }
+
+.modetogglebutton :last-child{
+  display: none;
+
+}
+
+.modetogglebutton.active :first-child{
+  display: none;
+
+
+}
+
+.modetogglebutton.active :last-child {
+  display: block;
+}
+
+.modetogglebutton{
+  transition: all 500ms ease-in-out;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+
+
+
+/* Body Stuff */
+
+
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -44,6 +94,7 @@ body {
   min-height: 100vh;
   display: flex;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 a {
@@ -130,7 +181,7 @@ main h1 {
 }
 
 .shrink-btn:hover {
-  background-color: var(--background-color);
+  background-color: var(--secondary-color);
 }
 
 nav:hover .shrink-btn,
@@ -157,8 +208,8 @@ nav:hover .shrink-btn,
   border: none;
   background: none;
   outline: none;
-  color: #fff;
-  caret-color: #fff;
+  color: var(--text-color);
+  caret-color: var(--text-color);
   font-family: inherit;
 }
 

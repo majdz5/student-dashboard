@@ -49,8 +49,10 @@ tooltip_elements.forEach((elem) => {
   elem.addEventListener("mouseover", showTooltip);
 });
 
-const themeToggleButton = document.querySelector(".theme-toggle");
+const themeToggleButton = document.querySelector(".modetogglebutton");
+const themeTogContainer = document.querySelector(".modetogcontainer");
 
-themeToggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("night-mode");
+themeTogContainer.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  themeToggleButton.classList.toggle("active");
 });
