@@ -472,15 +472,14 @@ body.shrink .search input {
 
 /* To-do List */
 
-.todo-body {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.todocontainer {
+  position: absolute;
+  margin: 10vh 10vw;
   background: #edeef0;
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
-  width: 30vw;
+  width: 100vw;
   height: 50vh;
 }
 
