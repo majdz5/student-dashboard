@@ -452,3 +452,20 @@ body.shrink .admin-profile {
 body.shrink .tooltip {
   display: grid;
 }
+
+/* Style for the login button */
+.login-btn {
+  display: flex;
+  padding: 8px 16px;         
+  font-size: 14px;          
+  background-color: var(--accent-color); 
+  color: var(--text-color);              
+  border: none;              
+  border-radius: 4px;       
+  cursor: pointer;          
+  transition: background-color 0.3s ease; 
+}
+
+.login-btn:hover {
+  background-color: #fff; 
+}

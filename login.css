@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9d9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background-color: #4f76ea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+   
+}
+
+.form-container {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 65%;
+}
+
+.formUp-container{
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 85%;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px ;
+    background-color:#d9d9f2;
+    color: rgb(9, 9, 9);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #fff;
+}
+
+p {
+    text-align: center;
+}
+
+span {
+    color: #d9d9f2;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+span:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the password container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.show-password {
+    position: absolute;
+    left: 185px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* Style for the Font Awesome icon */
+.show-password i {
+    color: #88a689;
+    transition: color 0.3s;
+}
+
+.show-password:hover i {
+    color: #88a689;
+}
