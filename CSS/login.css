@@ -1,7 +1,7 @@
 body {
-    font-family: "Poppins", sans-serif; 
-    background-color: #d9d9f2;
+    font-family: "Poppins", sans-serif;
     background-image: url(../ASSETS/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,71 +10,69 @@ body {
 }
 
 .container {
-    position: relative;
-    width: 500px;
-    height: 550px;
-    background: transparent; 
-    border: 3px solid rgba(255, 255, 255, .5);
+    min-width: 300px;
+    max-width: 500px;
+
+    height: 50vh;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 35px 20px 20px rgba(0, 0, 0, 0.1);
-    
+    position: relative;
+    padding: 20px; 
 }
 
-h2{
-    margin-bottom: 5px;
-    margin-left: 10%;
-    font-size: xx-large;
+h2 {
+    margin-bottom: 20px; 
+    font-size: 2rem; 
     color: #fff;
     text-align: center;
+    width: 100%;
 }
 
 .form-container {
-    width: 310px;
-    margin: 30px 0;
+    width: 100%;
+    max-width: 350px;
     padding: 30px;
     box-sizing: border-box;
-    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: auto;
 }
 
-.input-box label { 
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
+.input-box label {
+    display: block;
+    padding: 0 10px;
+    font-size: 1rem;
+    color: #fff;
 }
 
 input {
     width: 100%;
     padding: 15px;
     margin: 10px 0;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 1px solid #ccc;
+    font-size: 1rem;
 }
-
-.formUp-container{
-    width: 310px;
-    margin: 30px 0;
-    padding: 30px;
-    box-sizing: border-box;
-    height: 110%;
-}
-
-
 
 button {
-    position: center;
-    margin-top: 4px;
-    margin-left: 18%;
-    width: 75%;
-    padding: 10px ;
-    background-color:#d9d9f2;
+    width: 75%; 
+    padding: 12px;
+    background-color: #d9d9f2;
     color: rgb(9, 9, 9);
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    
+    transform:translateX(20%);
+    margin-top: 20px;
+    align-self: center; 
+    font-size: 1rem;
 }
 
 button:hover {
@@ -83,6 +81,7 @@ button:hover {
 
 p {
     text-align: center;
+    margin-top: 15px;
 }
 
 span {
@@ -95,7 +94,7 @@ span:hover {
     text-decoration: underline;
 }
 
-/* Styles for the password container */
+/* Password Container */
 .password-container {
     position: relative;
     width: 100%;
@@ -103,18 +102,27 @@ span:hover {
 
 .show-password {
     position: absolute;
-    left: 245px;
+    right: -20px; 
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;
     cursor: pointer;
 }
-/* Style for the Font Awesome icon */
+
 .show-password i {
-    color: #88a689;
+    color: #888; 
     transition: color 0.3s;
 }
 
 .show-password:hover i {
-    color: #88a689;
+    color: #555; 
+}
+
+/* Ignore Link */
+.ignore {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 0.8rem;
+    color: #fff;
 }
