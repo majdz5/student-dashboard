@@ -95,7 +95,7 @@ body {
   display: flex;
   position: relative;
   transition: all 0.3s ease-in-out;
-  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-image: url(../ASSETS/wallpaperflare.com_wallpaper.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -472,27 +472,37 @@ body.shrink .search input {
 
 /* To-do List */
 
-.todocontainer {
-  width: 400px;
-  height: 400px;
-  background: transparent;
-  backdrop-filter: blur(15px);
-  position: relative;
-  margin: 10vw;
-  border-radius: 20px;
+.todo-body {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  width: 30vw;
+  height: 50vh;
 }
 
-hr {
-background-color: #fbf6f6;
-height: 3px;
-border-radius: 20px;
-border: none;
+.todo-body input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px 0;
+  font-size: 20px;
+  height: 10%;
+  width: 100%;
 }
 
+.todo-body img {
+  cursor: pointer;
+  border-radius: 40px;
+  height: 55px;
+  width: 55px;
+  padding: 15px;
+  background: limegreen;
+}
 
 /* Style for the login button */
 .login-btn {
