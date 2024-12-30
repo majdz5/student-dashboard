@@ -27,7 +27,7 @@
   --background-color: #030303;
   --text-color: #e0dce7;
   --primary-font: 'Quantify', sans-serif;
-  --glassgradient:linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
+  --glassgradient: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
 }
 
 
@@ -113,9 +113,9 @@ nav {
   top: 0;
   left: 0;
   height: 100vh;
-  background:var(--glassgradient);  
-  backdrop-filter: blur(10px); 
- 
+  background: var(--glassgradient);
+  backdrop-filter: blur(10px);
+
   width: 12rem;
   padding: 0.9rem 0.2rem;
   color: var(--text-color);
@@ -123,7 +123,7 @@ nav {
   flex-direction: column;
   transition: width 0.3s ease-in-out;
   z-index: 10;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 
 nav::before {
@@ -133,7 +133,7 @@ nav::before {
   height: 100%;
   top: 0;
   left: 100%;
-  
+
 }
 
 main {
@@ -207,9 +207,9 @@ nav:hover .shrink-btn,
   color: var(--text-color);
   caret-color: var(--text-color);
   font-family: inherit;
-  font-size: 0.8rem; 
-  min-width: 2rem; 
-  max-width: 100%; 
+  font-size: 0.8rem;
+  min-width: 2rem;
+  max-width: 100%;
   transition: all 0.4s ease-in-out;
 }
 
@@ -273,7 +273,7 @@ nav:hover .shrink-btn,
 }
 
 .active-tab {
-  width:100%;
+  width: 100%;
   height: 45px;
   background-color: var(--secondary-color);
   border-radius: 15px;
@@ -333,7 +333,7 @@ nav:hover .shrink-btn,
   align-items: center;
   flex: 1;
   overflow: hidden;
-  
+
 }
 
 .admin-user img {
@@ -444,10 +444,12 @@ body.shrink .shrink-btn i {
 body.shrink .sidebar-links h4 {
   height: 10px;
 }
-body.shrink .active-tab{
+
+body.shrink .active-tab {
   width: 45px;
 
 }
+
 body.shrink .account {
   opacity: 1;
   pointer-events: all;
@@ -462,12 +464,14 @@ body.shrink .admin-profile {
 body.shrink .tooltip {
   display: grid;
 }
+
 body.shrink .search {
-  min-width: 2.3rem; 
+  min-width: 2.3rem;
 }
+
 body.shrink .search input {
-  min-width: 1rem; 
-  max-width: 100%; 
+  min-width: 1rem;
+  max-width: 100%;
 }
 
 /* To-do List */
@@ -475,52 +479,172 @@ body.shrink .search input {
 .todocontainer {
   position: absolute;
   margin: 10vh 10vw;
-  background: #edeef0;
+  background: var(--glassgradient);
+  backdrop-filter: blur(25px);
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
-  width: 100vw;
+  width: 50vw;
   height: 50vh;
 }
 
-.todo-body input {
+
+.todo-app {
+  position:relative ;
+  width: 100%;
+  max-width: 400px;
+  background-color: transparent;
+  margin: 10px;
+  padding: 40px 30px 70px;
+  border-radius: 20px;
+  height: 90%;
+
+
+}
+
+.todo-app h2 {
+
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.todo-app h2 img {
+
+  width: 30px;
+  margin: 30px;
+
+}
+
+.addtaskrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  height: 30px;
+
+}
+
+input {
   flex: 1;
   border: none;
   outline: none;
-  background: transparent;
-  padding: 15px 0;
-  font-size: 20px;
-  height: 10%;
-  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  font-weight: 14px;
+
 }
 
-.todo-body img {
+button {
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 6px 10px;
+  background-color: rgb(35, 35, 177);
+  color: white;
+  font-size: 14px;
   cursor: pointer;
-  border-radius: 40px;
-  height: 55px;
-  width: 55px;
-  padding: 15px;
-  background: limegreen;
+  border-radius: 30px;
+  height: 30px;
+
 }
+
+
+
+.todocontainer ul li {
+  list-style: none;
+  font-size: 17px;
+  color: var(--text-color);
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+
+
+}
+
+.todocontainer ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(../ASSETS/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+
+
+}
+
+
+.todocontainer ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+
+}
+
+.todocontainer ul li.checked::before {
+  background-image: url(../ASSETS/checked.png);
+
+}
+.todocontainer ul li span{
+
+  position: absolute;
+  top: 10px;
+  right: 0;
+  height: 28px;
+  width: 28px;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 50%;
+
+
+}
+
+.todocontainer ul li span:hover{
+
+  background: var(--accent-color);
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Style for the login button */
 .login-btn {
   display: flex;
-  padding: 8px 16px;         
-  font-size: 14px;          
-  background-color: var(--accent-color); 
-  color: var(--text-color);              
-  border: none;              
-  border-radius: 20px;       
-  cursor: pointer;          
-  transition: background-color 0.3s ease; 
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   place-items: center;
   position: fixed;
-  right:20px;
+  right: 20px;
   bottom: 20px;
 
 }
 
 .login-btn:hover {
-  background-color: var(--secondary-color); 
+  background-color: var(--secondary-color);
 }

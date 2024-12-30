@@ -52,7 +52,76 @@ tooltip_elements.forEach((elem) => {
 const themeToggleButton = document.querySelector(".modetogglebutton");
 const themeTogContainer = document.querySelector(".modetogcontainer");
 
+// Check localStorage for saved theme preference
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  themeToggleButton.classList.add("active");
+}
+
+// Event listener to toggle the theme and save preference
 themeTogContainer.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   themeToggleButton.classList.toggle("active");
+
+  // Save the current theme preference to localStorage
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
+
+
+
+
+const inputBox = document.getElementById("input-box");
+const todolistcontainer = document.getElementById("todo-list-container");
+
+function addtask(){
+  if(inputBox.value === ''){
+    alert("You must write something!");
+  }
+  else{
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    todolistcontainer.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
+    
+
+  }
+
+  inputBox.value = '';
+  saveData();
+}
+inputBox.addEventListener("keydown", function(e){
+  if(e.key === "Enter"){
+      addtask();
+  }
+});
+
+
+
+
+todolistcontainer.addEventListener("click",function(e){
+  if(e.target.tagName === "LI"){
+    e.target.classList.toggle("checked");
+    saveData();
+  }
+  else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+    saveData();
+  }
+}, false);
+
+function saveData(){
+  localStorage.setItem("data", todolistcontainer.innerHTML);
+}
+
+function showTaskList(){
+   todolistcontainer.innerHTML = localStorage.getItem("data");
+
+}
+
+showTaskList();
