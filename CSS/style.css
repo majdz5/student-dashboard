@@ -50,7 +50,7 @@
   height: 2rem;
   background-color: var(--text-color);
   color: var(--background-color);
-
+  z-index: 12;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -89,15 +89,20 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  background-color: var(--background-color);
   min-height: 100vh;
+  height: 100vh;
+  background-color: var(--background-color);
   display: flex;
+  flex-direction: row;
   position: relative;
   transition: all 0.3s ease-in-out;
   background-image: url(../ASSETS/wallpaperflare.com_wallpaper.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+
 }
 
 a {
@@ -109,13 +114,12 @@ ul {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 102%;
   background: var(--glassgradient);
   backdrop-filter: blur(10px);
-
   width: 12rem;
   padding: 0.9rem 0.2rem;
   color: var(--text-color);
@@ -478,15 +482,17 @@ body.shrink .search input {
 
 .todocontainer {
   position: absolute;
-  margin: 10vh 10vw;
+  margin: 20px 25px 20px 60px;
   background: var(--glassgradient);
   backdrop-filter: blur(25px);
   border-radius: 30px;
-  padding-left: 20px;
-  margin-bottom: 25px;
-  width: 50vw;
-  max-width: 450px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 300px;
   height: 50vh;
+  display: flex;
+  place-items: center;
+ 
 }
 
 
@@ -494,13 +500,11 @@ body.shrink .search input {
   position:relative ;
   width: 100%;
   max-width: 400px;
-  background-color: transparent;
   margin: 10px;
-  padding: 40px 30px 70px;
+  padding: 10px 20px 20px 10px;
   border-radius: 20px;
   height: 90%;
-
-
+  background-color:transparent;
 }
 
 .todo-app h2 {
@@ -508,7 +512,7 @@ body.shrink .search input {
   color: var(--text-color);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
 
 }
 
@@ -536,7 +540,7 @@ input {
   border: none;
   outline: none;
   background-color: transparent;
-  padding: 10px;
+  padding: 1px;
   font-weight: 14px;
 
 }
@@ -555,8 +559,6 @@ button {
 
 }
 
-
-
 .todocontainer ul li {
   list-style: none;
   font-size: 17px;
@@ -567,9 +569,17 @@ button {
   position: relative;
   padding-top: 15px;
 
+}
+#todo-list-container{
+  height: 25vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* border: #ebebeb solid 4px; */
+  border-radius: 20px;
+  
+  
 
 }
-
 .todocontainer ul li::before {
   content: '';
   position: absolute;
@@ -587,7 +597,7 @@ button {
 
 
 .todocontainer ul li.checked {
-  color: #555;
+  color: #2e2c2c;
   text-decoration: line-through;
 
 }
@@ -626,8 +636,6 @@ button {
 
 
 
-
-
 /* Style for the login button */
 .login-btn {
   display: flex;
@@ -649,3 +657,21 @@ button {
 .login-btn:hover {
   background-color: var(--secondary-color);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
