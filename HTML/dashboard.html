@@ -6,9 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Dashboard</title>
   <link rel="stylesheet" href="../CSS/style.css">
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Hayde Icon Library-->
+  <!-- Hawde Icon Libraries-->
+  <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Fonts here:-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="shrink">
@@ -135,13 +143,14 @@
         <i class='bx bxs-sun'></i>
       </div>
     </div>
-  </main>
+ 
 
 
 
 
   <!--TO DO LIST-->
   <div class="todocontainer">
+
     <div class="todo-app">
       <h2>To-Do List <img src="../ASSETS/icon.png"></h2>
       <div class="addtaskrow">
@@ -162,8 +171,38 @@
 
   </div>
 
+<div class="pomocontainer">
+    <h1>Pomodoro Timer</h1>
+    <div class="panel">
+      <p id="study">Study</p>
+      <p id="break">break</p>
+    </div>
+
+    <div class="timer">
+      <div class="circle">
+        <div class="time">
+          <p id="minutes">25</p>
+          <p id="seconds">00</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
+
+      <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+  </div>
 
 
+
+</div>
+
+
+</div>
+
+
+
+ </main>
 
   <script src="../JS/script.js"></script>
 </body>

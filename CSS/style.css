@@ -481,9 +481,9 @@ body.shrink .search input {
 /* To-do List */
 
 .todocontainer {
-  position: absolute;
-  margin: 20px 25px 20px 60px;
-  background: var(--glassgradient);
+ position: inline;
+ margin: 10px 25px 10px 30px;
+ background: var(--glassgradient);
   backdrop-filter: blur(25px);
   border-radius: 30px;
   padding-left: 15px;
@@ -574,7 +574,6 @@ button {
   height: 25vh;
   overflow-y: scroll;
   scrollbar-width: none;
-  /* border: #ebebeb solid 4px; */
   border-radius: 20px;
   
   
@@ -660,9 +659,7 @@ button {
 }
 
 
-
-
-
+/* Calendar Page */
 
 .elfsight-app-ef804d17-e122-4241-862b-e78446affcb7 {
   max-height: 100%;
@@ -675,9 +672,114 @@ button {
 }
 
 
+/* Pomodoro Timer */
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.pomocontainer {
+  width: 400px;
+  height: 400px;
+  position: inline;
+  margin: 10px 25px 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--glassgradient);
+  backdrop-filter: blur(15px);
+  flex-direction: column;
+  border-radius: 30px;
+  min-width: 300px;
+  height: 49vh;
+
+}
 
 
+.panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 18rem;
+  padding: 15px;
+  border-radius: 10rem;
+  -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+  box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
 
+.panel p {
+  opacity: .8;
+  transition: 1s ease-in;
+}
+
+.panel p.active {
+  opacity: 1;
+  color: var(--accent-color);
+
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 15px 10px black; 
+  box-shadow: 0px 0px 15px 10px black ;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: none;
+
+  position: relative;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.time {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.time p {
+  font-size: 4rem;
+}
+
+.time p:nth-of-type(2) {
+  position: relative;
+  top: -.5rem;
+  margin-inline: 1rem;
+}
+
+.controls {
+  margin-top: 2rem;
+}
+
+.controls button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.controls #reset {
+  display: none;
+}
 
 
 
