@@ -229,3 +229,17 @@ studyTitle.classList.add('active');
 
 
 }
+
+//quotes
+let currentIndex = 0;  
+const quotes = document.querySelectorAll('.Quotestext');  // Get all quote divs
+
+function showQuotes() {
+  for (let i = 0; i < quotes.length; i++) {
+    setTimeout(() => {
+      quotes.forEach(quote => quote.style.display = 'none');
+      quotes[i].style.display = 'block';
+    }, i * 4000); 
+  }
+}
+showQuotes();
