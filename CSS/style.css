@@ -782,5 +782,35 @@ main {
 }
 
 
+.Quotescontainer{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 10px 25px 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--glassgradient);
+  backdrop-filter: blur(15px);
+  flex-direction: column;
+  border-radius: 30px;
+  min-width: 300px;
+  height: 49vh;
+}
 
+.Quotestext{
+    
+    height: 180px;
+    padding: 40px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+ 
 
