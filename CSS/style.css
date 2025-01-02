@@ -90,7 +90,6 @@
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-
   background-color: var(--background-color);
   display: flex;
   flex-direction: row;
@@ -104,6 +103,19 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  flex: 1;
+  padding: 2rem;
+  color: var(--text-color);
+ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    min-height: 100vh;
+  
+}
 a {
   text-decoration: none;
 }
@@ -137,14 +149,6 @@ nav::before {
   top: 0;
   left: 100%;
 
-}
-
-main {
-  flex: 1;
-  padding: 2rem;
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
 }
 
 .sidebar-top {
@@ -487,8 +491,11 @@ body.shrink .search input {
   border-radius: 30px;
   padding-left: 15px;
   padding-right: 15px;
-  min-width: 300px;
-  height: 49vh;
+   margin: 10px 25px 10px 30px;
+   width: 30%;
+   min-width: 300px;
+   max-width: 300px;
+   height: 400px;
   display: flex;
   place-items: center;
  
@@ -520,7 +527,7 @@ body.shrink .search input {
 .todo-app h2 img {
 
   width: 30px;
- margin:0 0 0px 20px;
+  margin:0 0 0px 20px;
 
 }
 
@@ -572,7 +579,7 @@ button {
 
 }
 #todo-list-container{
-  height: 25vh;
+  height: 220px;
   overflow-y: scroll;
   scrollbar-width: none;
   border-radius: 20px;
@@ -675,15 +682,7 @@ button {
 
 /* Pomodoro Timer */
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  height: fit-content;
-  min-height: 100vh;
 
-}
 
 .pomocontainer {
   width: 30%;
@@ -699,8 +698,6 @@ main {
   backdrop-filter: blur(15px);
   flex-direction: column;
   border-radius: 30px;
-
-  height: 49vh;
 
 }
 
@@ -797,12 +794,15 @@ main {
   height: 15px;
 }
 
+/* Motivational Quote */
 
 .Quotescontainer{
-  width: 400px;
+  width: 30%;
+  min-width: 300px;
+  max-width: 300px;
   height: 400px;
   position: relative;
-  margin: 10px 25px 10px 5px;
+  margin: 10px 25px 10px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -810,8 +810,8 @@ main {
   backdrop-filter: blur(15px);
   flex-direction: column;
   border-radius: 30px;
-  min-width: 300px;
-  height: 49vh;
+  text-align: center;
+
 }
 
 .Quotestext{
