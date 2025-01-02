@@ -132,7 +132,7 @@ showTaskList();
 let studyTitle = document.getElementById('study');
 let breakTitle = document.getElementById('break');
 
-let studyTime = 1;
+let studyTime = 25;
 let breakTime = 5;
 
 let seconds = "00"

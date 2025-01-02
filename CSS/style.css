@@ -114,6 +114,7 @@ main {
     justify-content: space-between;
     height: fit-content;
     min-height: 100vh;
+    perspective: 1000px;
   
 }
 a {
@@ -498,8 +499,10 @@ body.shrink .search input {
    height: 400px;
   display: flex;
   place-items: center;
+  
  
 }
+
 
 
 .todo-app {
@@ -829,5 +832,18 @@ button {
     transition: opacity 0.5s ease-in-out;
 }
  
+iframe{
+  color: white;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  
+}
 
-
+iframe p{
+  color: white;
+ 
+}
