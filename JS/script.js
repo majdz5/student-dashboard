@@ -129,31 +129,33 @@ showTaskList();
 
 // Pomodoro Timer 
 
-let workTittle = document.getElementById('work');
-let breakTittle = document.getElementById('break');
+let studyTitle = document.getElementById('study');
+let breakTitle = document.getElementById('break');
 
-let workTime = 25;
+let studyTime = 1;
 let breakTime = 5;
 
 let seconds = "00"
 
+let TimerID;
+
 window.onload = () => {
-    document.getElementById('minutes').innerHTML = workTime;
+    document.getElementById('minutes').innerHTML = studyTime;
     document.getElementById('seconds').innerHTML = seconds;
 
-    workTittle.classList.add('active');
+    studyTitle.classList.add('active');
 }
+// start
 
-// start timer
 function start() {
-    // change button
+    // switch buttons
     document.getElementById('start').style.display = "none";
     document.getElementById('reset').style.display = "block";
 
     // changes the time 
     seconds = 59;
 
-    let workMinutes = workTime - 1;
+    let studyMinutes = studyTime - 1;
     let breakMinutes = breakTime - 1;
 
     breakCount = 0;
@@ -161,31 +163,31 @@ function start() {
     // countdown
     let timerFunction = () => {
         //change the display
-        document.getElementById('minutes').innerHTML = workMinutes;
+        document.getElementById('minutes').innerHTML = studyMinutes;
         document.getElementById('seconds').innerHTML = seconds;
 
         // start
         seconds = seconds - 1;
 
         if(seconds === 0) {
-            workMinutes = workMinutes - 1;
-            if(workMinutes === -1 ){
+            studyMinutes = studyMinutes - 1;
+            if(studyMinutes === -1 ){
                 if(breakCount % 2 === 0) {
                     // start break
-                    workMinutes = breakMinutes;
+                    studyMinutes = breakMinutes;
                     breakCount++
 
                     // change the panel
-                    workTittle.classList.remove('active');
-                    breakTittle.classList.add('active');
+                    studyTitle.classList.remove('active');
+                    breakTitle.classList.add('active');
                 }else {
                     // continue work
-                    workMinutes = workTime;
+                    studyMinutes = studyTime;
                     breakCount++
 
                     // change the panel
-                    breakTittle.classList.remove('active');
-                    workTittle.classList.add('active');
+                    breakTitle.classList.remove('active');
+                    studyTitle.classList.add('active');
                 }
             }
             seconds = 59;
@@ -193,5 +195,37 @@ function start() {
     }
 
     // start countdown
-    setInterval(timerFunction, 1000); // 1000 = 1s
+    TimerID = setInterval(timerFunction, 1000); 
+}
+
+
+function reset(){
+
+  // switches the buttons
+  document.getElementById('start').style.display = "block";
+  document.getElementById('reset').style.display = "none";
+
+  // stops the timer
+  clearInterval(TimerID);
+
+
+  //resets the time variables
+
+  studyMinutes = studyTime
+  breakMinutes = breakTime
+ seconds= "00"
+
+// resets cycle
+breakCount= 0;
+
+ // display
+
+document.getElementById('minutes').innerHTML = studyMinutes;
+document.getElementById('seconds').innerHTML = seconds;
+
+// changes back active tab
+breakTitle.classList.remove('active');
+studyTitle.classList.add('active');
+
+
 }
