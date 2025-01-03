@@ -116,17 +116,123 @@
           </div>
         </nav>
       
-      
+
         <main>
-          <h1>My Dashboard</h1>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur animi voluptatibus cum maxime distinctio
-            iste quod deleniti eius, autem voluptates cumque suscipit iure quasi eligendi ullam. Sapiente eligendi porro
-            reprehenderit corrupti error facilis quo, fugiat fugit? Maiores aliquam ad, molestiae iste nihil, commodi
-            doloremque tempore excepturi aut id ducimus unde?
-          </p>
-         
+          <section class="content-wrapper">
+            <div class="dashboard-overview">
+              <h2>Student Dashboard Help</h2>
+              
+              <h3>1. Overview</h3>
+              <details>
+                <summary>Manage Your Courses</summary>
+                <p>Keep track of all your enrolled courses in one place. View course details, important notes, and old sessions. This makes it easier to stay on top of your coursework and stay organized throughout the semester.</p>
+              </details>
+        
+              <details>
+                <summary>Pomodoro Timer for Focused Study</summary>
+                <p>Take advantage of the built-in Pomodoro Timer, a productivity technique that helps you manage study sessions and breaks. By working in focused intervals and taking regular short breaks, you can improve concentration, boost productivity, and avoid burnout.</p>
+              </details>
+        
+              <details>
+                <summary>Track Your Assignments</summary>
+                <p>Stay on top of all your assignments and deadlines. The dashboard provides a to-do list to prioritize tasks efficiently, helping you manage your time between your assignments and projects.</p>
+              </details>
+        
+              <details>
+                <summary>Calendar Management</summary>
+                <p>Sync your class schedules, exam dates, deadlines, and personal events in one place with the calendar feature. This helps you plan ahead and avoid missing any important events.</p>
+              </details>
+        
+              <details>
+                <summary>University News and Events</summary>
+                <p>Stay informed about the latest university news, announcements, and events. This ensures you never miss out on anything important.</p>
+              </details>
+        
+              <p>In summary, the <strong>Student Dashboard</strong> is an all-in-one platform designed to help you manage your academic life, improve your productivity, and stay motivated. With features that support study organization, task management, time management, and university updates, the dashboard makes your academic journey smoother and more productive.</p>
+        
+              <h3>2. How to Navigate the Dashboard</h3>
+              <p>To navigate, use the sidebar to access different sections such as Dashboard, Courses, News, and Calendar.</p>
+            </div>
+        
+            <div class="contact-section" id="contact">
+              <h1>Contact Us</h1>
+              <form id="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+              <p id="form-message"></p>
+            </div>
+          </section>
         </main>
+        
+
+
+
+
+       <!--<main>
+
+          <section class="content-wrapper">
+            <div class="dashboard-overview">
+              <h2>Student Dashboard Help</h2>
+              
+              <h3>1. Overview</h3>
+              <p>The <strong>Student Dashboard</strong> is designed to help you manage your academic journey more effectively and efficiently. With its user-friendly interface and a range of powerful tools, this dashboard offers several features that allow you to stay organized, motivated, and on track with your studies. Here's how it can help you:</p>
+              <h4>a. Manage Your Courses</h4>
+              <p>Keep track of all your enrolled courses in one place. View course details, important notes,old sessions. This makes it easier to stay on top of your coursework and stay organized throughout the semester.</p>
+            
+              <h4>b. Pomodoro Timer for Focused Study</h4>
+              <p>Take advantage of the built-in <strong>Pomodoro Timer</strong>, a productivity technique that helps you manage study sessions and breaks. By working in focused intervals and taking regular short breaks, you can improve concentration, boost productivity, and avoid burnout.</p>
+            
+              <h4>c. Track Your Assignments</h4>
+              <p>Stay on top of all your assignments and deadlines. The dashboard provides a to do list to prioritize tasks efficiently, helping you manage your time between your assignments and projects.</p>
+            
+              <h4>d. Calendar Management</h4>
+              <p>Sync your class schedules, exam dates, deadlines, and personal events in one place with the <strong>calendar feature</strong>. This helps you plan ahead and avoid missing any important events.</p>
+            
+              <h4>e. University News and Events</h4>
+              <p>Stay informed about the latest university news, announcements, and events. This ensures you never miss out on anything important.</p>
+            
+              <p>In summary, the <strong>Student Dashboard</strong> is an all-in-one platform designed to help you manage your academic life, improve your productivity, and stay motivated. With features that support study organization, task management, time management, and university updates, the dashboard makes your academic journey smoother and more productive.</p>
+            
+              <h3>2. How to Navigate the Dashboard</h3>
+              <p>To navigate, use the sidebar to access different sections such as Dashboard, Courses,News,and Calendar.</p>
+            </div>
+           
+
+            <div class="contact-section" id="contact">
+              <h1 id="contact">Contact us</h1>
+              <form id="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+              <p id="form-message"></p>
+            </div>
+          </section>
+        </main> -->
+
+
         <div class="modetogcontainer">
           <div class="modetogglebutton">
           <i class='bx bxs-moon' ></i>

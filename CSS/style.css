@@ -867,3 +867,145 @@ iframe p{
 .college-updates h1, .assignments h1{
   padding: 20px;
 }
+
+/*help*/
+
+/* Overall Section Styling for both sections */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  margin: auto;
+  padding: 20px;
+  
+}
+
+/* Dashboard Overview Styling */
+.dashboard-overview {
+  height: auto;
+  margin-left: 65px;
+  width: 50%; 
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-overview h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.dashboard-overview h3 {
+  font-size: 1.5em;
+  color: #3498db;
+  margin-top: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.dashboard-overview p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.dashboard-overview strong {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Basic Styling */
+details summary {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+}
+
+details p {
+  margin-left: 20px;
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  height: 5%;
+  width: 24%;
+  color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  margin-right: 80px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  width: 100%;
+  padding: 6px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #36853a;
+}
+
+p#form-message {
+  text-align: center;
+  margin-top: 15px;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+

@@ -243,3 +243,30 @@ function showQuotes() {
   }
 }
 showQuotes();
+
+//help
+function validateForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+  var formMessage = document.getElementById('form-message');
+
+  if (name === "" || email === "" || message === "") {
+    formMessage.textContent = "Please fill out all fields.";
+    return false;  // Prevent form submission
+  }
+
+  // Check if email is valid
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailPattern.test(email)) {
+    formMessage.textContent = "Please enter a valid email address.";
+    return false;
+  }
+
+  // If everything is valid
+  formMessage.textContent = "Thank you for your message! We will get back to you soon.";
+  formMessage.style.color = "black";
+  return false;  // Simulate form submission for demo purposes
+}
+
+
