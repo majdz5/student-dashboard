@@ -376,7 +376,7 @@ nav:hover .shrink-btn,
   display: flex;
   height: 35px;
   min-width: 2.4rem;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   align-items: center;
   justify-content: center;
@@ -646,13 +646,12 @@ input {
 
 
 
-
 /* Style for the login button */
 .login-btn {
   display: flex;
   padding: 8px 16px;
   font-size: 14px;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   border: none;
   border-radius: 20px;
@@ -677,8 +676,8 @@ input {
   overflow: hidden;
   background: transparent;
   backdrop-filter: blur(25px);
-
-
+  width: 90%;
+  margin: 0 auto;
 
 }
 
@@ -1003,6 +1002,55 @@ details p {
 }
 
 
+/* Courses paeg */
+
+#course-list{ 
+  width: 50%;
+  margin: 0 auto;
+  background:var(--glassgradient);
+  backdrop-filter: blur(15px);
+  padding: 10px 10px 5px 10px;
+  border-radius: 20px;
+
+}
+#course-list h1{
+  text-align: center;
+  padding: 10px;
+}
+.course > h3 {
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 10px;
+  margin: 0 0 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+.course h3:hover{
+  backdrop-filter: blur(20px);
+}
+
+.course .details {
+  padding-left: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.course .details li {
+  margin: 5px 0;
+}
+
+.course .details a {
+  text-decoration: none;
+  color:var(--text-color);
+}
+
+.course .details a:hover {
+  text-decoration: underline;
+}
 
 
 

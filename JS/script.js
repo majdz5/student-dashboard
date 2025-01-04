@@ -270,3 +270,48 @@ function validateForm() {
 }
 
 
+
+
+function toggleDetails(h3Element){
+
+  const cdetails = h3Element.nextElementSibling
+
+  const boxIconArrow = h3Element.querySelector('box-icon');
+
+  const alldetails = document.querySelectorAll('.details');
+
+  const allboxIonArrows = document.querySelectorAll('box-icon');
+
+
+  //  Closes others when u click on one
+  alldetails.forEach( cdetails => {
+    if (cdetails !== h3Element.nextElementSibling){
+      cdetails.style.height = "0";
+    }
+  })
+
+  allboxIonArrows.forEach( boxIconArrow => {
+    if (boxIconArrow !== h3Element.nextElementSibling)
+      boxIconArrow.style.transform = "rotate(0deg)";
+  })
+ 
+
+
+  //  Toggle 
+
+  if (cdetails.style.height === "100px") {
+    cdetails.style.height = "0"; 
+  } else {
+    cdetails.style.height = "100px"; 
+  }
+
+
+  if (cdetails.style.height === "100px"){
+    boxIconArrow.style.transform = "rotate(90deg)";
+
+  }else {
+    boxIconArrow.style.transform = "rotate(0deg)";
+  }
+
+
+}
