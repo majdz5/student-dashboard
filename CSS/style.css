@@ -556,13 +556,13 @@ input {
 
 }
 
-button {
+.todo-app button {
   border: none;
   outline: none;
   position: relative;
   padding: 6px 10px;
-  background-color: var(--accent-color);
-  color: white;
+  color: var(--accent-color);
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   border-radius: 30px;
@@ -705,7 +705,7 @@ button {
 }
 
 .pomocontainer h1{
-
+  color: var(--text-color)  ;
   font-size: 25px;
 }
 
@@ -913,7 +913,7 @@ iframe p{
 .dashboard-overview p {
   font-size: 1em;
   line-height: 1.6;
-  margin-bottom: 20px;
+ margin-bottom: 20px;
   color: #555;
 }
 
@@ -950,7 +950,7 @@ details p {
   margin-right: 80px;
 }
 
-h1 {
+.contact-section h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
@@ -960,27 +960,27 @@ h1 {
   margin-bottom: 8px;
 }
 
-label {
+.contact-section label {
   display: block;
   margin-bottom: 5px;
   color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-textarea {
+.contact-section textarea {
   resize: vertical;
   min-height: 150px;
 }
 
-button {
+.contact-section button {
   width: 100%;
   padding: 6px;
   background-color: #4CAF50;
@@ -991,11 +991,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.contact-section button:hover {
   background-color: #36853a;
 }
 
-p#form-message {
+.contact-section p#form-message {
   text-align: center;
   margin-top: 15px;
   font-family: Georgia, serif;
