@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  transition: all 0.4s ease-in-out;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -856,7 +857,7 @@ iframe p{
   margin-left: 65px;
   width: 50%; 
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: transparent;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -995,10 +996,13 @@ details p {
   margin: 0 0 10px;
   border-radius: 10px;
   display: flex;
+  font-weight: 200;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
 
 }
+
 .course h3:hover{
   backdrop-filter: blur(20px);
 }
