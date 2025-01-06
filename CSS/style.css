@@ -4,11 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  transition: all 0.4s ease-in-out;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 
 /* All Variables Needed */
 :root {
@@ -31,8 +29,6 @@
   --glassgradient: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
 }
 
-
-
 @font-face {
   font-family: 'Quantify';
   src: url('/fonts/Quantify.woff2') format('woff2'),
@@ -43,12 +39,10 @@
 }
 
 /* Dark mode Toggle */
-
 .modetogcontainer {
-
   position: fixed;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   background-color: var(--text-color);
   color: var(--background-color);
   z-index: 12;
@@ -56,20 +50,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 20px;
-  right: 20px;
-
+  top: 18px;
+  right: 18px;
 }
 
 .modetogglebutton :last-child {
   display: none;
-
 }
 
 .modetogglebutton.active :first-child {
   display: none;
-
-
 }
 
 .modetogglebutton.active :last-child {
@@ -77,17 +67,13 @@
 }
 
 .modetogglebutton {
-  transition: all 500ms ease-in-out;
+  transition: all 450ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-
 /* Body Stuff */
-
-
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -105,19 +91,12 @@ body {
 }
 
 main {
-  flex: 1;
-  padding: 2rem;
+  width: 100%;
   color: var(--text-color);
- 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    height: fit-content;
-    min-height: 100vh;
-    perspective: 1000px;
-  
+  min-height: 100vh;
+  perspective: 900px;
 }
+
 a {
   text-decoration: none;
 }
@@ -127,30 +106,29 @@ ul {
 }
 
 nav {
-  position:fixed;
+  position: fixed;
   left: 0;
   min-height: 100%;
   max-height: 100vh;
   background: var(--glassgradient);
-  backdrop-filter: blur(10px);
-  width: 12rem;
-  padding: 0.9rem 0.2rem;
+  backdrop-filter: blur(9px);
+  width: 11rem;
+  padding: 0.8rem 0.18rem;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease-in-out;
   z-index: 10;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 nav::before {
   content: "";
   position: absolute;
-  width: 2rem;
+  width: 1.8rem;
   height: 100%;
   top: 0;
   left: 100%;
-
 }
 
 .sidebar-top {
@@ -162,24 +140,24 @@ nav::before {
 .shrink-btn {
   position: absolute;
   top: 50%;
-  height: 20px;
-  padding: 0 0.2rem;
+  height: 18px;
+  padding: 0 0.18rem;
   background-color: var(--primary-color);
-  border-radius: 4px;
+  border-radius: 3.6px;
   cursor: pointer;
-  box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
-  right: -2.65rem;
-  transform: translateY(-50%) translateX(-8px);
+  box-shadow: 0 2.7px 9px -2.7px rgba(70, 46, 118, 0.3);
+  right: -2.4rem;
+  transform: translateY(-50%) translateX(-7px);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: 0.27s;
   display: flex;
   place-items: center;
 }
 
 .shrink-btn i {
-  line-height: 27px;
-  transition: 0.3s;
+  line-height: 24px;
+  transition: 0.27s;
   align-self: center;
 }
 
@@ -483,23 +461,94 @@ body.shrink .search input {
   max-width: 100%;
 }
 
+
+
+.dashboardcont{
+  width: 90%;
+  display: grid;
+ max-height: 100%;
+  grid-template-columns: 1fr 2fr 0.8fr;
+  grid-template-rows: repeat((3, 1fr));
+  backdrop-filter: blur(20px);
+  background:var(--glassgradient);
+ 
+  margin: 1rem auto;
+  flex-wrap: wrap;
+  border-radius: 30px;
+}
+
+
+.weather{
+  height: fit-content;
+  overflow: hidden;
+  grid-row: 1/3;
+  grid-column: 1;
+  width: fit-content;
+  padding: 30px;
+}
+.rightsidecont{
+  grid-column: 3;
+  grid-row: span 3;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: (5, 1fr);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  border-top-left-radius: 10px;
+  flex: 1;
+  border-bottom-left-radius: 10px;
+
+}
+
+/* Announcements */
+.announcements {
+  padding: 30px;
+  grid-row: 1;
+  grid-column: 3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  
+}
+
+.announcements h3 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.announcements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.announcements li {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.announcements li strong {
+  font-weight: bold;
+}
+
+.announcements li .date {
+  font-size: 0.9em;
+  color: #888;
+  margin-left: 10px;
+}
+
 /* To-do List */
 
 .todocontainer {
- position: inline;
+  grid-column: 1;
+  grid-row:2/4;
+ position: relative;
  margin: 10px 25px 10px 30px;
- background: var(--glassgradient);
-  backdrop-filter: blur(25px);
   border-radius: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-   margin: 10px 25px 10px 30px;
-   width: 30%;
-   min-width: 300px;
-   max-width: 300px;
-   height: 400px;
+ bottom: 0px;
+   min-width: fit-content;
+   height: 300px;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  top: 200px;
+ overflow: hidden;
   
  
 }
@@ -509,11 +558,11 @@ body.shrink .search input {
 .todo-app {
   position:relative ;
   width: 100%;
-  max-width: 400px;
+  max-width: fit-content;
   margin: 10px;
-  padding: 10px 20px 20px 10px;
+  padding: 10px 0 10px;
   border-radius: 20px;
-  height: 90%;
+  height: 50%;
   background-color:transparent;
 
 }
@@ -573,7 +622,7 @@ input {
 
 .todocontainer ul li {
   list-style: none;
-  font-size: 17px;
+  font-size: 13px;
   color: var(--text-color);
   padding: 12px 8px 12px 50px;
   user-select: none;
@@ -594,8 +643,8 @@ input {
 .todocontainer ul li::before {
   content: '';
   position: absolute;
-  height: 28px;
-  width: 28px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-image: url(../ASSETS/unchecked.png);
   background-size: cover;
@@ -629,6 +678,7 @@ input {
   color: var(--text-color);
   text-align: center;
   border-radius: 50%;
+  margin-left: 40px;
 
 
 }
@@ -658,17 +708,16 @@ input {
 
 
 .pomocontainer {
-  width: 30%;
-  min-width: 300px;
-  max-width: 300px;
+grid-column: 2;
+grid-row:  2;
   height: 400px;
   position: inline;
   margin: 10px 25px 10px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--glassgradient);
-  backdrop-filter: blur(15px);
+ 
+  
   flex-direction: column;
   border-radius: 30px;
 
@@ -687,6 +736,8 @@ input {
   padding: 10px;
   margin: 20px;
   border-radius: 10rem; 
+
+  font-weight: 500;
 
 }
 
@@ -770,33 +821,32 @@ input {
 /* Motivational Quote */
 
 .Quotescontainer{
-  width: 30%;
+  grid-column: 3;
+  grid-row: 3;
+  width: 100%;
   min-width: 300px;
-  max-width: 300px;
-  height: 400px;
+  height: fit-content;
   position: relative;
-  margin: 10px 25px 10px 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: var(--glassgradient);
-  backdrop-filter: blur(15px);
+  align-items: flex-start;
   flex-direction: column;
   border-radius: 30px;
-  text-align: center;
+  padding: 20px 40px;
+  margin: 0 auto;
 
 }
 
 .Quotestext{
     
     height: 180px;
-    padding: 40px;
-    text-align: center;
-    font-size: 25px;
+    padding: 10px 0;
+ 
+    font-size: 20px;
     font-family: Georgia, serif;
     font-style: italic;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     display: none;
     transition: opacity 0.5s ease-in-out;
@@ -818,6 +868,26 @@ iframe p{
  
 }
 
+/* Study Stats */
+.study-stats {
+  color: var(--text-color);
+  padding:35px;
+  text-align: flex-start;
+  grid-column: 3;
+  grid-row: 2;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.study-stats h3 {
+  margin-bottom: 10px;
+}
+
+.study-stats p {
+  margin: 5px 0;
+}
 
 
 /* News page */

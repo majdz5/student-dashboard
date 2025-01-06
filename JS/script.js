@@ -7,6 +7,30 @@ const tooltip_elements = document.querySelectorAll(".tooltip-element");
 
 let activeIndex;
 
+
+// Study Stats thing
+
+let pomodoroCount = 0;
+let tasksCompleted = 0;
+let totalStudyMinutes = 0;
+
+function updateStats() {
+  document.getElementById('pomodoro-count').textContent = pomodoroCount;
+  document.getElementById('tasks-completed').textContent = tasksCompleted;
+  document.getElementById('study-time').textContent = `${totalStudyMinutes}m`;
+}
+
+function completePomodoro() {
+  pomodoroCount++;
+  totalStudyMinutes += 25; 
+  updateStats();
+}
+
+function completeTask() {
+  tasksCompleted++;
+  updateStats();
+}
+
 shrink_btn.addEventListener("click", () => {
   document.body.classList.toggle("shrink");
   setTimeout(moveActiveTab, 400);
@@ -107,7 +131,11 @@ inputBox.addEventListener("keydown", function(e){
 todolistcontainer.addEventListener("click",function(e){
   if(e.target.tagName === "LI"){
     e.target.classList.toggle("checked");
-    saveData();
+   
+     if(e.target.classList.contains("checked")){
+      completeTask();
+     }
+     saveData();
   }
   else if(e.target.tagName === "SPAN"){
     e.target.parentElement.remove();
@@ -179,7 +207,9 @@ function start() {
 
                     // change the panel
                     studyTitle.classList.remove('active');
-                    breakTitle.classList.add('active');
+                    breakTitle.classList.add('active');   
+                    // adds to pomodoro count
+                    completePomodoro();
                 }else {
                     // continue work
                     studyMinutes = studyTime;
@@ -315,4 +345,5 @@ function toggleDetails(h3Element){
 
 
 }
+
 
