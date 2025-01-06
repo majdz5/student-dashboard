@@ -1,177 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Hayde Icon Library-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Hayde Icon Library-->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </head>
 
-     <!--SIDE BAR-->
-     <body class="shrink">
+<!--SIDE BAR-->
 
+<body class="shrink">
 
-        <nav>
-          <div class="sidebar-top">
-            <span class="shrink-btn">
-              <i class='bx bx-chevron-left'></i>
-            </span>
+  <nav>
+    <div class="sidebar-top">
+      <span class="shrink-btn">
+        <i class='bx bx-chevron-left'></i>
+      </span>
 
-          </div>
-      
-          <div class="search">
-            <i class='bx bx-search'></i>
-            <input type="text" class="hide" placeholder="Ask Chatgpt">
-          </div>
-      
-          <div class="sidebar-links">
-            <ul>
-              <li class="tooltip-element" data-tooltip="0">
-                <a href="dashboard.html"  data-active="0">
-                  <div class="icon">
-                    <i class='bx bx-tachometer'></i>
-                    <i class='bx bxs-tachometer'></i>
-                  </div>
-                  <span class="link hide">Dashboard</span>
-                </a>
-              </li>
-              <li class="tooltip-element" data-tooltip="1">
-                <a href="courses.html" data-active="1">
-                  <div class="icon">
-                    <i class='bx bx-folder'></i>
-                    <i class='bx bxs-folder'></i>
-                  </div>
-                  <span class="link hide">Courses</span>
-                </a>
-              </li>   
-              <div class="tooltip">
-                <span class="show">Dashboard</span>
-                <span>Courses</span>
-              </div>
-            </ul>
-      
-           
-      
-            <ul>
-              <li class="tooltip-element" data-tooltip="0">
-                <a href="calendar.html" data-active="4">
-                  <div class="icon">
-                    <i class='bx bx-notepad'></i>
-                    <i class='bx bxs-notepad'></i>
-                  </div>
-                  <span class="link hide">Calendar</span>
-                </a>
-              </li>
-              <li class="tooltip-element" data-tooltip="1">
-                <div class="active-tab"></div>
-                <a href="help.html" class="active" data-active="5">
-                  <div class="icon">
-                    <i class='bx bx-help-circle'></i>
-                    <i class='bx bxs-help-circle'></i>
-                  </div>
-                  <span class="link hide">Help</span>
-                </a>
-              </li>
-              
-              <div class="tooltip">
-                <span class="show">Calendar</span>
-                <span>Help</span>
-              </div>
-            </ul>
-          </div>
-      
-          <div class="sidebar-footer">
-            <a href="#" class="account tooltip-element" data-tooltip="0">
-              <i class='bx bx-user'></i>
-            </a>
-            <div class="admin-user tooltip-element" data-tooltip="1">
-              <div class="admin-profile hide">
-                <img src="../ASSETS/coolpfplol.png" alt="cool pfp">
-                <div class="admin-info">
-                 <a href="profile.html"> <h3>Profile</h3></a>
-                  <h5>Student</h5>
-                </div>
-              </div>
-              <a href="../index.html" class="log-out">
-                <i class='bx bx-log-out'></i>
-              </a>
-            </div>
-            <div class="tooltip">
-              <span class="show">Student Profile</span>
-              <span>Logout</span>
-            </div>
-          </div>
-        </nav>
-      
+    </div>
 
-        <main>
-          <section class="content-wrapper">
-            <div class="dashboard-overview">
-              <h2>Student Dashboard Help</h2>
-              
-              <h3>1. Overview</h3>
-              <details>
-                <summary>Manage Your Courses</summary>
-                <p>Keep track of all your enrolled courses in one place. View course details, important notes, and old sessions. This makes it easier to stay on top of your coursework and stay organized throughout the semester.</p>
-              </details>
-        
-              <details>
-                <summary>Pomodoro Timer for Focused Study</summary>
-                <p>Take advantage of the built-in Pomodoro Timer, a productivity technique that helps you manage study sessions and breaks. By working in focused intervals and taking regular short breaks, you can improve concentration, boost productivity, and avoid burnout.</p>
-              </details>
-        
-              <details>
-                <summary>Track Your Assignments</summary>
-                <p>Stay on top of all your assignments and deadlines. The dashboard provides a to-do list to prioritize tasks efficiently, helping you manage your time between your assignments and projects.</p>
-              </details>
-        
-              <details>
-                <summary>Calendar Management</summary>
-                <p>Sync your class schedules, exam dates, deadlines, and personal events in one place with the calendar feature. This helps you plan ahead and avoid missing any important events.</p>
-              </details>
-        
-              <details>
-                <summary>University News and Events</summary>
-                <p>Stay informed about the latest university news, announcements, and events. This ensures you never miss out on anything important.</p>
-              </details>
-        
-              <p>In summary, the <strong>Student Dashboard</strong> is an all-in-one platform designed to help you manage your academic life, improve your productivity, and stay motivated. With features that support study organization, task management, time management, and university updates, the dashboard makes your academic journey smoother and more productive.</p>
-        
-              <h3>2. How to Navigate the Dashboard</h3>
-              <p>To navigate, use the sidebar to access different sections such as Dashboard, Courses, News, and Calendar.</p>
+    <div class="search">
+      <i class='bx bx-search'></i>
+      <input type="text" class="hide" placeholder="Ask Chatgpt">
+    </div>
+
+    <div class="sidebar-links">
+      <ul>
+        <li class="tooltip-element" data-tooltip="0">
+          <a href="dashboard.html" data-active="0">
+            <div class="icon">
+              <i class='bx bx-tachometer'></i>
+              <i class='bx bxs-tachometer'></i>
             </div>
-        
-            <div class="contact-section" id="contact">
-              <h1>Contact Us</h1>
-              <form id="contact-form" onsubmit="return validateForm()">
-                <div class="form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-group">
-                  <label for="message">Your Message</label>
-                  <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-              </form>
-              <p id="form-message"></p>
+            <span class="link hide">Dashboard</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="1">
+          <a href="courses.html" data-active="1">
+            <div class="icon">
+              <i class='bx bx-folder'></i>
+              <i class='bx bxs-folder'></i>
             </div>
-          </section>
-        </main>
-        
-        <div class="modetogcontainer">
-          <div class="modetogglebutton">
-          <i class='bx bxs-moon' ></i>
-          <i class='bx bxs-sun' ></i>
+            <span class="link hide">Courses</span>
+          </a>
+        </li>
+        <div class="tooltip">
+          <span class="show">Dashboard</span>
+          <span>Courses</span>
         </div>
+      </ul>
+
+
+
+      <ul>
+        <li class="tooltip-element" data-tooltip="0">
+          <a href="calendar.html" data-active="4">
+            <div class="icon">
+              <i class='bx bx-notepad'></i>
+              <i class='bx bxs-notepad'></i>
+            </div>
+            <span class="link hide">Calendar</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="1">
+          <div class="active-tab"></div>
+          <a href="help.html" class="active" data-active="5">
+            <div class="icon">
+              <i class='bx bx-help-circle'></i>
+              <i class='bx bxs-help-circle'></i>
+            </div>
+            <span class="link hide">Help</span>
+          </a>
+        </li>
+
+        <div class="tooltip">
+          <span class="show">Calendar</span>
+          <span>Help</span>
+        </div>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="#" class="account tooltip-element" data-tooltip="0">
+        <i class='bx bx-user'></i>
+      </a>
+      <div class="admin-user tooltip-element" data-tooltip="1">
+        <div class="admin-profile hide">
+          <img src="../ASSETS/coolpfplol.png" alt="cool pfp">
+          <div class="admin-info">
+            <a href="profile.html">
+              <h3>Profile</h3>
+            </a>
+            <h5>Student</h5>
+          </div>
+        </div>
+        <a href="../index.html" class="log-out">
+          <i class='bx bx-log-out'></i>
+        </a>
       </div>
-     
-      <script src="../JS/script.js"></script>
-  </body>
+      <div class="tooltip">
+        <span class="show">Student Profile</span>
+        <span>Logout</span>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="content-wrapper">
+      <h1>Overview</h1>
+      <div class="dashboard-overview">
+        
+          <h3>
+            Dashboard
+          </h3>
+          <p class="details">
+            The Dashbord is your quick access section to various tools you might need as a student. It includes a
+            Todo-List for your daily task management, a <a href="">Pomodoro Timer</a> for time management, a
+            motivational widget to keep you inspired, a small reminder of your latest assignments, and a progress
+            tracker to track your studies!
+          </p>
+        
+          <h3>
+            Courses
+          </h3>
+          <p class="details">
+            The Courses page includes all your courses, seperated into folders, and each folder split into: Material,
+            Sessions, and Student notes.
+            They all link to a Google drive folder that is open access for everyone to add to. This page also includes
+            all our latest assignements(this is only meant as a reminder)
+          </p>
+        
+          <h3>
+            Calendar
+          </h3>
+          <p class="details">
+            The Calendar page includes a weekly timeline of our semester courses. (Will be more interactive in the future, as for now it is only an exported widget.)
+          </p>
+        
+        </div>
+          <div class="about-us">
+            <h1>About Us</h1>
+            <p>The idea behind this project was to make the LU students' life easier. This website is meant to have (almost) everything you need. It's supposed to me a place that brings everythig together and makes it easy-access. With that said, we plan on expanding this more in the future and including more useful features. If you have any idea or suggestion for a feature, you're more than welcome to submit it in the form below. If you noticed any bugs or strange behavior, we would also love to hear about it. Thank you!
+            </p>
+            <h6>Made By Yara Rachah and Majd Zeid </h6>
+      </div>
+        <div class="contact-section" id="contact">
+          <h1>Suggest a Feature / Improvement</h1>
+
+          <form id="contact-form" onsubmit="return validateForm()">
+            <div class="contactcontainer1">
+                   <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                 </div>
+                <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+               </div> 
+             </div>
+          <div class="contactcontainer2">
+           
+              <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            
+            <button type="submit">Submit</button>
+          </div>
+          </form>
+
+          <p id="form-message"></p>
+        </div>
+    </section>
+  </main>
+
+  <div class="modetogcontainer">
+    <div class="modetogglebutton">
+      <i class='bx bxs-moon'></i>
+      <i class='bx bxs-sun'></i>
+    </div>
+  </div>
+
+  <script src="../JS/script.js"></script>
+</body>
+
 </html>

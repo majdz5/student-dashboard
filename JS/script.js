@@ -315,3 +315,4 @@ function toggleDetails(h3Element){
 
 
 }
+
