@@ -495,3 +495,41 @@ studyTitle2.classList.add('active');
 
 
 }
+
+
+  const DashboardElement= document.querySelectorAll('.dashboardelement');
+  const LeftSideCont = document.querySelector('.leftsidecont');
+  const CenterCont = document.querySelector('.centercont');
+  const  RightSideCont = document.querySelector('.rightsidecont');
+
+
+
+  function checkScreenSize() {
+    if (window.innerWidth <= 1300 && window.innerWidth >= 400) {
+      DashboardElement.forEach(element => {
+        element.addEventListener('mouseenter', hoverEffect);
+        element.addEventListener('mouseleave', leaveEffect);
+      });
+    } else {
+      DashboardElement.forEach(element => {
+        element.removeEventListener('mouseenter', hoverEffect);
+        element.removeEventListener('mouseleave', leaveEffect);
+      });
+    }
+  }
+  function hoverEffect(e) {
+   DashboardElement.forEach(element => element.classList.remove('hovered'));
+   e.target.classList.add('hovered');
+
+  }
+
+  function leaveEffect(e) {
+    e.target.classList.remove('hovered');
+    CenterCont.classList.add('hovered');
+  }
+
+  // Initial check when page loads
+  checkScreenSize();
+
+  // Recheck on window resize
+  window.addEventListener('resize', checkScreenSize);
