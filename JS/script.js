@@ -347,3 +347,151 @@ function toggleDetails(h3Element){
 }
 
 
+// Focus Mode
+
+document.querySelector('.focusbut').addEventListener('click', focus);
+
+function focus() {
+  const focuscontainer = document.querySelector('.focuscontainer');
+  const focusbutton = document.querySelector('.focusbut');
+  const secondpomo = document.querySelector('.pomocontainer2');
+  const focusText = document.getElementById("focus-text");
+  reset();
+  focuscontainer.classList.add('focused');
+
+  secondpomo.style.opacity = "100%";
+
+  void focusText.offsetWidth;
+
+ setTimeout( () => {
+
+    focusText.classList.add("animate");
+    focusText.style.borderRight = "0.15em solid var(--accent-color)"; 
+   },900);
+   
+   
+   focusText.classList.remove("animate");
+   focusText.addEventListener("animationend", (event) => {
+    if (event.animationName === "typing") { 
+      focusText.style.borderRight = "none";
+    }
+
+  });
+
+
+  document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape') {
+      secondpomo.style.opacity = "0";
+      focuscontainer.classList.remove('focused');
+    }
+  });
+}
+
+
+
+// SECOND POMODORO TIMER
+
+
+
+let studyTitle2 = document.getElementById('study2');
+let breakTitle2 = document.getElementById('break2');
+
+let studyTime2 = 25;
+let breakTime2 = 5;
+
+let seconds2 = "00"
+
+let TimerID2;
+
+window.onload = () => {
+    document.getElementById('minutes2').innerHTML = studyTime2;
+    document.getElementById('seconds2').innerHTML = seconds2;
+
+    studyTitle2.classList.add('active');
+}
+// start
+
+function start2() {
+    // switch buttons
+    document.getElementById('start2').style.display = "none";
+    document.getElementById('reset2').style.display = "block";
+
+    // changes the time 
+    seconds2 = 59;
+
+    let studyMinutes2 = studyTime2 - 1;
+    let breakMinutes2 = breakTime2 - 1;
+
+    breakCount2 = 0;
+
+    // countdown
+    let timerFunction = () => {
+        //change the display
+        document.getElementById('minutes2').innerHTML = studyMinutes2;
+        document.getElementById('seconds2').innerHTML = seconds2;
+
+        // start
+        seconds2 = seconds2 - 1;
+
+        if(seconds2 === 0) {
+            studyMinutes2 = studyMinutes2 - 1;
+            if(studyMinutes2 === -1 ){
+                if(breakCount2 % 2 === 0) {
+                    // start break
+                    studyMinutes2 = breakMinutes2;
+                    breakCount2++
+
+                    // change the panel
+                    studyTitle2.classList.remove('active');
+                    breakTitle2.classList.add('active');   
+                    // adds to pomodoro count
+                    completePomodoro2();
+                }else {
+                    // continue work
+                    studyMinutes2 = studyTime2;
+                    breakCount2++
+
+                    // change the panel
+                    breakTitle2.classList.remove('active');
+                    studyTitle2.classList.add('active');
+                }
+            }
+            seconds2 = 59;
+        }
+    }
+
+    // start countdown
+    TimerID2 = setInterval(timerFunction, 1000); 
+}
+
+
+function reset2(){
+
+  // switches the buttons
+  document.getElementById('start2').style.display = "block";
+  document.getElementById('reset2').style.display = "none";
+
+  // stops the timer
+  clearInterval(TimerID2);
+
+
+  //resets the time variables
+
+  studyMinutes2 = studyTime2
+  breakMinutes2 = breakTime2
+ seconds2= "00"
+
+// resets cycle
+breakCount2= 0;
+
+ // display
+
+document.getElementById('minutes2').innerHTML = studyMinutes2;
+document.getElementById('seconds2').innerHTML = seconds2;
+
+// changes back active tab
+breakTitle2.classList.remove('active');
+studyTitle2.classList.add('active');
+
+
+}

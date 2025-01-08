@@ -177,7 +177,7 @@
 
 </div>  
 
-
+<button class="focusbut" onclick="focus" > Focus Mode</button>
 
 
 <div class="weather">
@@ -282,8 +282,36 @@
 
 
  </main>
+ <div class="focuscontainer" >
+  <h1 id="focus-text">You are now in focus mode, press ESC to leave.</h1>
+   
+<div class="pomocontainer2">
+  <h2>Pomodoro Timer</h2>
+  <div class="panel2">
+    <p id="study2">Study</p>
+    <p id="break2">break</p>
+  </div>
+
+  <div class="timer2">
+    <div class="circle2">
+      <div class="time2">
+        <p id="minutes2">25</p>
+        <p>:</p>
+        <p id="seconds2">00</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="controls2">
+    <button id="start2" onclick="start2()"><i class="fa-solid fa-play"></i></button>
+    <button id="reset2" onclick="reset2()"><i class="fa-solid fa-arrow-rotate-left"></i></buton>
+</div>
+
+</div> 
+ </div>
 
   <script src="../JS/script.js"></script>
+  
 </body>
 
 </html>
