@@ -533,3 +533,23 @@ studyTitle2.classList.add('active');
 
   // Recheck on window resize
   window.addEventListener('resize', checkScreenSize);
+
+
+
+  const dashboard = document.querySelector('.dashboardcont');
+
+function adjustDashboard() {
+  const dashboardWidth = dashboard.scrollWidth;
+  const viewportWidth = window.innerWidth;
+
+  if (dashboardWidth > viewportWidth) {
+    const overflow = (dashboardWidth - viewportWidth) / 2; // Calculate overflow
+    dashboard.style.transform = `translateX(-${overflow}px)`; // Adjust position
+  } else {
+    dashboard.style.transform = 'translateX(0)'; // Reset if no overflow
+  }
+}
+
+// Run on window resize and initial load
+window.addEventListener('resize', adjustDashboard);
+adjustDashboard();
