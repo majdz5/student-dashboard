@@ -569,10 +569,8 @@ padding: 4em 2em ;
   grid-row: 2/4;
   position: relative;
   margin: 10px 25px 10px 30px;
-
-  bottom: 0px;
+height: 400px;
   min-width: fit-content;
-  height: 300px;
   display: flex;
   justify-content: center;
   top: 200px;
@@ -583,8 +581,6 @@ padding: 4em 2em ;
 
 
 }
-
-
 
 .todo-app {
   position: relative;
@@ -664,7 +660,7 @@ input {
 }
 
 #todo-list-container {
-  height: 220px;
+  height:150px;
   overflow-y: scroll;
   scrollbar-width: none;
   border-radius: 20px;
@@ -858,7 +854,8 @@ input {
   grid-row: 3;
   width: 100%;
   min-width: 300px;
-  height: fit-content;
+    height: fit-content;
+    max-height: 150px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1501,7 +1498,7 @@ body{
   transition: transform 0.4s ease;
   transform: translate3D(0, 0,-100px);
   opacity: 0.5;
- 
+
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .hovered{
@@ -1527,6 +1524,13 @@ body{
     transform: translateX(-100px);
   }
  }
+ @media (max-width: 816px){
+  .dashboardcont{
+    transform: translateX(-150px);
+    scale: 0.8;
+    
+  }
+ }
  @media (max-width: 700px){
   .dashboardcont{
     scale: 0.8;
@@ -1544,6 +1548,7 @@ body{
     transform: translate3D(-100px, 0,-100px);
     z-index: 4;
 
+
   }
 
   .hovered.leftsidecont{
@@ -1554,22 +1559,39 @@ body{
 
   }
  }
+
+
+ @media (min-width:400px) and (max-width:620px){
+
+  .dashboardcont{
+   margin-right: 10vw;
+    scale: 0.75;
+  }
+ 
+ } 
+
+
+
  @media (max-width:400px) {
 
 .dashboardcont{
 
   
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  overflow: scroll;
+  justify-content: center;
+  flex-direction: row;
+  overflow-y: scroll;
+  overflow-x: hidden;
   transform: translateX(0%);
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
-  margin: 0 auto;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
-  position: absolute;
+  margin-left: 6vw;
+  backdrop-filter: blur(20px);
+  gap: 0;
+  background:var(--glassgradient);
+ 
 
  
 }
@@ -1579,7 +1601,13 @@ body{
 .centercont, .rightsidecont, .leftsidecont {
   opacity: 1;
   transform: translate3d(0,0,0);
-  height: 100vmax;
+  height:fit-content;
+  background: transparent;
+  backdrop-filter: none;
+  border:none;
+  border-radius: 5px;
+  scale: 0.8;
+  padding: 2rem;
   
 }
  }
