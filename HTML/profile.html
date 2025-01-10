@@ -6,6 +6,8 @@
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Hayde Icon Library-->
 </head>
 
@@ -85,7 +87,7 @@
           </div>
       
           <div class="sidebar-footer">
-            <a href="#" class="account tooltip-element" data-tooltip="0">
+            <a href="profile.html" class="account tooltip-element" data-tooltip="0">
               <i class='bx bx-user'></i>
             </a>
             <div class="admin-user tooltip-element" data-tooltip="1">
@@ -110,14 +112,39 @@
       
       
         <main>
-          <h1>My Dashboard</h1>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur animi voluptatibus cum maxime distinctio
-            iste quod deleniti eius, autem voluptates cumque suscipit iure quasi eligendi ullam. Sapiente eligendi porro
-            reprehenderit corrupti error facilis quo, fugiat fugit? Maiores aliquam ad, molestiae iste nihil, commodi
-            doloremque tempore excepturi aut id ducimus unde?
-          </p>
-         
+          <div class="p-page-container">
+
+
+
+            <div class="profilecontainer" >
+              <div class="profilepic">
+                <img src="../ASSETS/coolpfplol.png" alt="cool pfp">
+                </div> 
+                <div class="student-info"> 
+               <div class="nameemail"><h3>Student Name</h3></a>
+                  <h5>student.name@st.ul.edu.lb</h5></div> 
+               <div class="yearinfo">
+                  <h5>Computer Science</h5>
+                  <h5> Second Year</h5>
+                <h6> Semester 1</h6>
+                
+               </div>
+              </div>
+       
+
+        </div>
+        <div class="profile-bio">
+          <div class="bioheader"><h3>Bio</h3><button id="save-bio-btn" disabled>Save</button>
+          <button id="change-bio-btn" style="display: none;">Change</button></div>
+          <textarea id="bio-input" placeholder="Tell us something about yourself..."></textarea>
+        </div>
+        
+
+        <div class="future-feature">
+          <h3>Future Feature Here !!</h3>
+        </div>
+
+
         </main>
         <div class="modetogcontainer">
           <div class="modetogglebutton">
@@ -127,6 +154,7 @@
       </div>
        
       <script src="../JS/script.js"></script>
+      <script src="../JS/profilepage.js"></script>
     </body>
   </html>
   
