@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 /* General Reset */
 * {
   margin: 0;
@@ -6,7 +8,6 @@
   font-family: Arial, sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /* All Variables Needed */
 :root {
@@ -1488,19 +1489,140 @@ details {
 
 
 
+/* Profile Page */
+
+.p-page-container{
+
+  width: 70%;
+  height: 90%;
+  display: flex;
+  margin: 5vh auto;
+  border-radius: 20px;
+  flex-direction: column;
+  background: var(--glassgradient);
+  backdrop-filter: blur(20px);
+  padding: 0 20px;
+  align-items: center;
+}
 
 
+.profilecontainer{
+  top: 0;
+  left: 0;
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  align-items: center;
+ 
+  gap: 20px;
+  border-radius: 20px;
+  margin: 1em;
 
+}
 
+.profilepic img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 
+.nameemail{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;  
+}
+.student-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+.profile-bio {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  
+  border-radius: 30px;
 
+}
 
+.profile-bio h3 {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+.bioheader{
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+  align-items: center;
+  height: fit-content;
+  
 
+}
+#bio-input {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.8rem;
+  outline: none;
+  resize: none;
+}
 
+#bio-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
 
+#save-bio-btn, #change-bio-btn {
+  padding: 10px 20px;
+  scale: 0.8;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
+#save-bio-btn:hover{
+  background: var(--accent-color);
+}
 
+#bio-display {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.future-feature{
+
+  height: 300px;
+  width: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.future-feature h3{
+padding: 10px;
+
+}
 
 
 
