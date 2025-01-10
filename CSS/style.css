@@ -937,6 +937,7 @@ iframe p {
   align-items: center;
   backdrop-filter: blur(15px);
   background: var(--glassgradient);
+  font-size: 1em;
 
 }
 
@@ -945,7 +946,7 @@ iframe p {
   height: auto;
   margin: 0 auto 30px;
   width: 80%;
-  padding: 2rem;
+  padding: 20px;
   border-radius: 50px;
   color: var(--text-color);
   font-family: Arial, sans-serif;
@@ -1004,7 +1005,7 @@ details {
   height: fit-content;
   line-height: 2rem;
   border-top: solid 3px rgba(255, 255, 255, 0.2);
-  padding: 5rem;
+  padding: 1vw;
   text-align: center;
   border-bottom: solid 3px rgba(255, 255, 255, 0.2);
 
@@ -1047,6 +1048,7 @@ details {
 
 #contact-form button {
   max-width: 200px;
+  border-radius: 20px;
 
 }
 
