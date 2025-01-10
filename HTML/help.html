@@ -18,18 +18,19 @@
 <body class="shrink">
 
   <nav>
+     <!-- Top section with shrink button -->
     <div class="sidebar-top">
       <span class="shrink-btn">
         <i class='bx bx-chevron-left'></i>
       </span>
 
     </div>
-
+ <!-- Search bar -->
     <div class="search">
       <i class='bx bx-search'></i>
       <input type="text" class="hide" placeholder="Ask Chatgpt">
     </div>
-
+ <!-- Sidebar links for the dashboard,courses,calendar and help -->
     <div class="sidebar-links">
       <ul>
         <li class="tooltip-element" data-tooltip="0">
@@ -111,10 +112,14 @@
     </div>
   </nav>
   <main>
+
+
+
     <section class="content-wrapper">
       <h1>Overview</h1>
       <div class="dashboard-overview">
-        
+        <!-- Dashboard overview section -->
+
           <h3>
             Dashboard
           </h3>
@@ -144,16 +149,19 @@
         
         </div>
           <div class="about-us">
+             <!-- About the project section -->
             <h1>About Us</h1>
             <p>The idea behind this project was to make the LU students' life easier. This website is meant to have (almost) everything you need. It's supposed to be a place that brings everythig together and makes it easy-access. With that said, we plan on expanding this more in the future and including more useful features. If you have any idea or suggestion for a feature, you're more than welcome to submit it in the form below. If you noticed any bugs or strange behavior, we would also love to hear about it. Thank you!
             </p>
-            <h6>Made By Yara Rachah and Majd Zeid </h6>
+            <h6>Made By Majd Zeid and Yara Rachah  </h6>
       </div>
         <div class="contact-section" id="contact">
+           <!-- Contact form for suggestions or improvements -->
           <h1>Suggest a Feature / Improvement</h1>
 
           <form id="contact-form" onsubmit="return validateForm()">
             <div class="contactcontainer1">
+              <!-- Name and Email input fields -->
                    <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -164,18 +172,18 @@
                </div> 
              </div>
           <div class="contactcontainer2">
-           
+           <!-- Message input field -->
               <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
             
             <button type="submit">Submit</button>
           </div>
           </form>
 
-          <p id="form-message"></p>
+          <p id="form-message"></p>  <!-- Message displayed after form submission -->
         </div>
     </section>
   </main>
-
+<!-- Toggling between light mode and dark mode -->
   <div class="modetogcontainer">
     <div class="modetogglebutton">
       <i class='bx bxs-moon'></i>
