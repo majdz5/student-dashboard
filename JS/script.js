@@ -269,7 +269,7 @@ function showQuotes() {
     setTimeout(() => {
       quotes.forEach(quote => quote.style.display = 'none');
       quotes[i].style.display = 'block';
-    }, i * 40000); 
+    }, i * 15000); 
   }
 }
 showQuotes();
