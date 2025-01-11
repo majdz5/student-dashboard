@@ -32,6 +32,9 @@ function toggleForms() {
     }, 500); 
 }
 
+function Redirect() {
+    window.location.href = "../HTML/dashboard.html"; 
+}
 // Toggle password visibility
 function togglePasswordVisibility(passwordId, iconId) {
     const passwordField = document.getElementById(passwordId);
@@ -57,17 +60,26 @@ function validateLogin() {
         return false;
     }
 
-    // Additional validation (e.g., regex for email format)
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(email)) {
         alert("Please enter a valid email.");
         return false;
     }
 
-    // Here you can add backend API calls to authenticate the user
+   
     alert("Login successful!");
+    Redirect();
+   
     return false;
 }
+
+
+
+
+
+
+
+
 
 // Validate sign-up form
 function validateSignup() {
@@ -86,14 +98,16 @@ function validateSignup() {
         return false;
     }
 
-    // Additional email validation
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(email)) {
         alert("Please enter a valid email.");
         return false;
     }
 
-    // Here you can add backend API calls to create the user account
+
+    // Here Goes API
     alert("Sign up successful!");
+    Redirect();
+
     return false;
 }

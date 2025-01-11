@@ -161,12 +161,3 @@ span:hover {
 .show-password:hover i {
     color: #555; 
 }
-
-/* Ignore Link */
-.ignore {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    font-size: 0.8rem;
-    color: #fff;
-}

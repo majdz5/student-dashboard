@@ -6,7 +6,7 @@ const shortcuts = document.querySelector(".sidebar-links h4");
 const tooltip_elements = document.querySelectorAll(".tooltip-element");
 
 let activeIndex;
-
+showLoadingScreen();
 
 // Study Stats thing
 
@@ -553,3 +553,27 @@ function adjustDashboard() {
 // Run on window resize and initial load
 window.addEventListener('resize', adjustDashboard);
 adjustDashboard();
+
+
+
+
+
+// Loading screen stuff
+
+
+function showLoadingScreen() {
+  const loadingScreen = document.getElementById('loading-screen');
+  const LoadingText1 = document.getElementById('loadingtext1');
+  const LoadingText2 = document.getElementById('loadingtext2');
+
+setTimeout( () => {
+  LoadingText1.style.opacity = "95%";
+},800);
+setTimeout( () => {
+  LoadingText2.style.opacity = "95%";
+},2000);
+
+  setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+  }, 6000); 
+}
