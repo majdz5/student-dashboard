@@ -1,10 +1,35 @@
-// Toggle between login and sign-up forms
 function toggleForms() {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
+    const formContainer = document.querySelector('.container');
+   
+   
+    // Trigger active class for animation
+
+    loginForm.classList.toggle('active');
+    signupForm.classList.toggle('active');
+
+    if (loginForm.classList.contains('active')) {
     
-    loginForm.style.display = (loginForm.style.display === 'none') ? 'block' : 'none';
-    signupForm.style.display = (signupForm.style.display === 'none') ? 'block' : 'none';
+    setTimeout(()=> {
+
+        formContainer.style.height = '50vh'; 
+
+    },500);
+        
+    } else {
+        formContainer.style.height = '80vh'; 
+    }
+   
+    setTimeout(() => {
+        if (loginForm.classList.contains('active')) {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+        } else {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        }
+    }, 500); 
 }
 
 // Toggle password visibility

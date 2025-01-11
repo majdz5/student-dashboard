@@ -1504,6 +1504,7 @@ details {
   backdrop-filter: blur(20px);
   padding: 0 20px;
   align-items: center;
+  color: whitesmoke;
 }
 
 
@@ -1613,11 +1614,12 @@ details {
   height: 300px;
   width: 100%;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color:rgba(0, 0, 0, 0.19); ;
   justify-content: center;
   align-items: center;
   margin: 10px;
   border-radius: 20px;
+  text-align: center;
 }
 
 .future-feature h3{
@@ -1761,7 +1763,7 @@ body{
  }
 
 
- @media (min-width:400px) and (max-width:620px){
+ @media (min-width:451px) and (max-width:620px){
 
   .dashboardcont{
    margin-right: 10vw;
@@ -1772,7 +1774,8 @@ body{
 
 
 
- @media (max-width:400px) {
+
+ @media (max-width:450px) {
 
 .dashboardcont{
 
@@ -1809,5 +1812,9 @@ body{
   scale: 0.8;
   padding: 2rem;
   
+}
+.profilecontainer{
+  flex-direction: column;
+  padding: 10px;
 }
  }
