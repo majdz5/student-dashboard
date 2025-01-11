@@ -30,6 +30,7 @@
   --glassgradient: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
 }
 
+/* Font Face */
 @font-face {
   font-family: 'Quantify';
   src: url('/fonts/Quantify.woff2') format('woff2'),
@@ -106,7 +107,7 @@ a {
 ul {
   list-style: none;
 }
-
+/* Navigation */
 nav {
   position: fixed;
   left: 0;
@@ -132,13 +133,13 @@ nav::before {
   top: 0;
   left: 100%;
 }
-
+/* Sidebar Top Section */
 .sidebar-top {
   position: relative;
   display: flex;
   align-items: center;
 }
-
+/* Shrink Button */
 .shrink-btn {
   position: absolute;
   top: 50%;
@@ -173,7 +174,7 @@ nav:hover .shrink-btn,
   opacity: 1;
   pointer-events: all;
 }
-
+/* Search Box */
 .search {
   min-height: 2.2rem;
   background-color: var(--background-color);
@@ -206,6 +207,7 @@ nav:hover .shrink-btn,
   color: var(--text-color);
 }
 
+/* Sidebar Links And Their Icons*/
 .sidebar-links ul {
   position: relative;
 }
@@ -260,7 +262,7 @@ nav:hover .shrink-btn,
 .sidebar-links a.active i:last-child {
   opacity: 1;
 }
-
+/* Active Tab Square */
 .active-tab {
   width: 100%;
   height: 45px;
@@ -273,6 +275,7 @@ nav:hover .shrink-btn,
   z-index: -1;
 }
 
+/* Sidebar Headers */
 .sidebar-links h4 {
   position: relative;
   font-size: 0.8rem;
@@ -285,13 +288,13 @@ nav:hover .shrink-btn,
   line-height: 45px;
   transition: opacity 0.3s 0.2s, height 0.5s 0s;
 }
-
+/* Sidebar Footer */
 .sidebar-footer {
   position: relative;
   font-size: 0.85rem;
   margin-top: auto;
 }
-
+/* Account Section */
 .account {
   display: flex;
   align-items: center;
@@ -308,7 +311,7 @@ nav:hover .shrink-btn,
 .account:hover {
   color: #fff;
 }
-
+/* Admin User Info */
 .admin-user {
   display: flex;
   align-items: center;
@@ -352,7 +355,7 @@ nav:hover .shrink-btn,
   margin-top: 0.3rem;
   line-height: 1;
 }
-
+/* Log Out Button */
 .log-out {
   display: flex;
   height: 35px;
@@ -1657,7 +1660,7 @@ padding: 10px;
 }
 
 
-
+/* Responsive Design */
 
 
 @media (max-width: 1200px) {
