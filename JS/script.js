@@ -356,6 +356,7 @@ function focus() {
   const focusbutton = document.querySelector('.focusbut');
   const secondpomo = document.querySelector('.pomocontainer2');
   const focusText = document.getElementById("focus-text");
+  const closebutton = document.querySelector('.close-button');
   reset();
   focuscontainer.classList.add('focused');
 
@@ -377,8 +378,11 @@ function focus() {
     }
 
   });
-
-
+  closebutton.addEventListener('click', () =>{
+    secondpomo.style.opacity = "0";
+    focuscontainer.classList.remove('focused');
+  })
+  
   document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape') {
       secondpomo.style.opacity = "0";
@@ -386,6 +390,12 @@ function focus() {
     }
   });
 }
+
+
+
+
+
+
 
 
 
