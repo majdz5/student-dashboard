@@ -33,7 +33,7 @@ function toggleForms() {
 }
 
 function Redirect() {
-    window.location.href = "../dashboard.html"; 
+    window.location.href = "./dashboard.html"; 
 }
 // Toggle password visibility
 function togglePasswordVisibility(passwordId, iconId) {
