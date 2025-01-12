@@ -196,7 +196,7 @@ nav:hover .shrink-btn,
   cursor: pointer;
   place-items: center;
   transition: all 0.4s ease-in-out;
-
+  
 }
 
 .search input {
@@ -1785,8 +1785,17 @@ padding: 10px;
   word-spacing: 7px;
 }
 
+.fZyojg {
+  background: none;
+  right: -8px;
+  justify-content: flex-end;
+}
 
-
+.laMBwU {
+  justify-content: flex-start;
+  background: none;
+  left: -8px;
+}
 /* All Animations */
 
 @keyframes sk-chase {
