@@ -1279,19 +1279,37 @@ iframe p {
 
 
 /* Help Section */
-.content-wrapper {
+.content-wrapperParent{
   display: flex;
   width: 100%;
   gap: 20px;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 20px;
-  /*border-radius: 50px;*/
-  border: solid 5px rgba(255, 255, 255, 0.5);
+ /* border-radius: 50px;*/
+ /* border: solid 5px rgba(255, 255, 255, 0.5);*/
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(18px);
   background: var(--glassgradient);
+  font-size: 1em;
+
+}
+
+
+.content-wrapper {
+  display: flex;
+  width: 80%;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+  /*border-radius: 50px;*/
+ /* border: solid 5px rgba(255, 255, 255, 0.5);*/
+  flex-direction: column;
+  align-items: center;
+  /*backdrop-filter: blur(18px);*/
+  background: transparent;
   font-size: 1em;
 
 }
