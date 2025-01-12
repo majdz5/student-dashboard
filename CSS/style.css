@@ -470,7 +470,7 @@ body.shrink .search input {
   max-width: 100%;
 }
 
-
+/* Main container for the dashboard layout */
 
 .dashboardcont {
   width: 90%;
@@ -485,7 +485,7 @@ body.shrink .search input {
   border-radius: 30px;
   perspective: 1000px;
 }
-
+/* Center content section of the dashboard */
 .centercont{
   grid-column: 2;
   grid-template-rows: span 3;
@@ -498,7 +498,7 @@ body.shrink .search input {
   margin: 0 auto;
 padding: 4em 2em ;
 }
-
+/* Right-side content section of the dashboard */
 .rightsidecont {
   grid-column: 3;
   grid-row: span 3;
@@ -512,6 +512,7 @@ padding: 4em 2em ;
   border-bottom-left-radius: 10px;
 
 } 
+/* Left-side content section of the dashboard */
 .leftsidecont{
   grid-column: 1;
   grid-row: span 3;
@@ -524,6 +525,8 @@ padding: 4em 2em ;
   flex: 1;
   border-bottom-right-radius: 10px;
 }
+
+/* Weather widget styling */
 .weather {
   height: fit-content;
   overflow: hidden;
@@ -728,18 +731,6 @@ input {
 
 }
 
-/* Calendar Page */
-
-.elfsight-app-ef804d17-e122-4241-862b-e78446affcb7 {
-  max-height: 100%;
-  overflow: hidden;
-  background: transparent;
-  backdrop-filter: blur(25px);
-  width: 90%;
-  margin: 0 auto;
-
-}
-
 
 /* Pomodoro Timer */
 
@@ -855,6 +846,201 @@ input {
   color: var(--text-color);
 }
 
+
+/* Focus Mode */
+.focusbut {
+  width: 100px;
+  height: 50px;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  border-radius: 20px;
+  margin: 30px;
+}
+
+.focuscontainer {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  z-index: 99;
+  transition: all 0.7s ease-in-out, border-radius 1.5s ease-in-out;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+}
+
+.focused {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  z-index: 109;
+
+}
+
+.focuscontainer h1 {
+  max-width: fit-content;
+  color: whitesmoke;
+  overflow: hidden;
+  margin: 40px auto;
+  width: 0;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  font-size: 1em;
+
+  border-right: 0.15em solid var(--accent-color);
+}
+
+
+.animate {
+  animation: typing 9.5s steps(46, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Second pomodoro timer for the function screen  */
+
+
+.pomocontainer2 {
+
+  position: relative;
+  margin: 10px 25px 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.pomocontainer2 h2 {
+  color: white;
+  font-size: 25px;
+
+}
+
+.panel2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 12rem;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10rem;
+  z-index: 999;
+  color: white;
+  font-weight: 500;
+
+}
+
+.panel2 p {
+  opacity: .8;
+  transition: 0.5s ease-in;
+}
+
+.panel2 p.active {
+  opacity: 1;
+  color: var(--accent-color);
+
+
+
+}
+
+.timer2 {
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 25px 0.2px rgba(255, 255, 255, 0.5);
+
+}
+
+.circle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: none;
+  position: relative;
+  text-align: center;
+
+}
+
+.circle2::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+
+}
+
+.time2 {
+  position: relative;
+  display: flex;
+
+  flex-direction: row;
+
+}
+
+.time2 p {
+  font-size: 4rem;
+  text-align: center;
+
+}
+
+.time2 p:nth-of-type(2) {
+  position: relative;
+}
+
+.controls2 {
+  margin-top: 1rem;
+  display: grid;
+  place-items: center;
+  align-items: center;
+
+
+  justify-content: center;
+}
+
+#reset2 {
+  display: none;
+
+
+
+}
+
+.controls2 button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 15px;
+
+  color: whitesmoke;
+
+}
+
+.focused .pomocontainer2 {
+  opacity: 1;
+}
+
+
+
 /* Motivational Quote */
 
 .Quotescontainer {
@@ -926,7 +1112,169 @@ iframe p {
 }
 
 
+/* Courses page */
 
+.cpagecontainer{
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#course-list {
+  width: 40%;
+  min-width: 200px;
+  margin: 0 auto;
+  background: var(--glassgradient);
+  backdrop-filter: blur(15px);
+  padding: 10px 10px 5px 10px;
+  border-radius: 20px;
+  height: 80%;
+  min-height: fit-content;
+
+}
+
+#course-list h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.course>h3 {
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 10px;
+  margin: 0 0 10px;
+  border-radius: 10px;
+  display: flex;
+  font-weight: 200;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.course h3:hover {
+  backdrop-filter: blur(20px);
+}
+
+.course .details {
+  padding-left: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.course .details li {
+  margin: 5px 0;
+}
+
+.course .details a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.course .details a:hover {
+  text-decoration: underline;
+}
+
+
+.assignments {
+  width: 40%;
+  min-width: fit-content; 
+  height: 80%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: var(--glassgradient);
+  padding: 10px 20px;
+  overflow: auto ;
+
+}
+
+
+.assignments h1 {
+  padding: 20px;
+  text-align: center;
+}
+.assignments-list-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.section-title h3 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 10px;
+  
+}
+
+.task-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.task-details h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.task-details p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color:var(--secondary-text-color);
+}
+
+
+/* Calendar Page */
+
+.elfsight-app-ef804d17-e122-4241-862b-e78446affcb7 {
+  max-height: 100%;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(25px);
+  width: 90%;
+  margin: 0 auto;
+
+}
 
 
 /* Help Section */
@@ -1148,351 +1496,6 @@ details {
   font-family: Georgia, serif;
   font-style: italic;
 }
-
-
-/* Courses paeg */
-
-.cpagecontainer{
-
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-left: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-#course-list {
-  width: 40%;
-  min-width: 200px;
-  margin: 0 auto;
-  background: var(--glassgradient);
-  backdrop-filter: blur(15px);
-  padding: 10px 10px 5px 10px;
-  border-radius: 20px;
-  height: 80%;
-  min-height: fit-content;
-
-}
-
-#course-list h1 {
-  text-align: center;
-  padding: 10px;
-}
-
-.course>h3 {
-  background-color: transparent;
-  color: var(--text-color);
-  padding: 10px;
-  margin: 0 0 10px;
-  border-radius: 10px;
-  display: flex;
-  font-weight: 200;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease-in-out;
-
-}
-
-.course h3:hover {
-  backdrop-filter: blur(20px);
-}
-
-.course .details {
-  padding-left: 20px;
-  height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
-}
-
-.course .details li {
-  margin: 5px 0;
-}
-
-.course .details a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.course .details a:hover {
-  text-decoration: underline;
-}
-
-
-.assignments {
-  width: 40%;
-  min-width: fit-content; 
-  height: 80%;
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px auto;
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  background: var(--glassgradient);
-  padding: 10px 20px;
-  overflow: auto ;
-
-}
-
-
-.assignments h1 {
-  padding: 20px;
-  text-align: center;
-}
-.assignments-list-container{
-  display: flex;
-  flex-direction: column;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.section-title h3 {
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  color: var(--text-color);
-}
-
-.task {
-  display: flex;
-  align-items: center;
-  background: transparent;
-  backdrop-filter: blur(15px);
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  padding: 10px;
-  
-}
-
-.task-icon {
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent-color);
-  color: white;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.task-details h4 {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-.task-details p {
-  margin: 2px 0;
-  font-size: 0.85rem;
-  color:var(--secondary-text-color);
-}
-
-/* Focus Mode */
-.focusbut {
-  width: 100px;
-  height: 50px;
-  align-self: center;
-  justify-self: center;
-  cursor: pointer;
-  background-color: #000000;
-  color: white;
-  border-radius: 20px;
-  margin: 30px;
-}
-
-.focuscontainer {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  position: fixed;
-  background-color: rgb(0, 0, 0);
-  z-index: 99;
-  transition: all 0.7s ease-in-out, border-radius 1.5s ease-in-out;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-
-}
-
-.focused {
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  overflow: hidden;
-  z-index: 109;
-
-}
-
-.focuscontainer h1 {
-  max-width: fit-content;
-  color: whitesmoke;
-  overflow: hidden;
-  margin: 40px auto;
-  width: 0;
-  letter-spacing: 0.15em;
-  white-space: nowrap;
-  font-size: 1em;
-
-  border-right: 0.15em solid var(--accent-color);
-}
-
-
-.animate {
-  animation: typing 9.5s steps(46, end), blink-caret 0.75s step-end infinite;
-}
-
-/* Second pomodoro timer for the function screen  */
-
-
-.pomocontainer2 {
-
-  position: relative;
-  margin: 10px 25px 10px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 30px;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-}
-
-.pomocontainer2 h2 {
-  color: white;
-  font-size: 25px;
-
-}
-
-.panel2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
-  width: 12rem;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 10rem;
-  z-index: 999;
-  color: white;
-  font-weight: 500;
-
-}
-
-.panel2 p {
-  opacity: .8;
-  transition: 0.5s ease-in;
-}
-
-.panel2 p.active {
-  opacity: 1;
-  color: var(--accent-color);
-
-
-
-}
-
-.timer2 {
-  display: flex;
-  color: whitesmoke;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 25px 3px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 25px 0.2px rgba(255, 255, 255, 0.5);
-
-}
-
-.circle2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: none;
-  position: relative;
-  text-align: center;
-
-}
-
-.circle2::before {
-  content: '';
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  backdrop-filter: blur(15px);
-
-}
-
-.time2 {
-  position: relative;
-  display: flex;
-
-  flex-direction: row;
-
-}
-
-.time2 p {
-  font-size: 4rem;
-  text-align: center;
-
-}
-
-.time2 p:nth-of-type(2) {
-  position: relative;
-}
-
-.controls2 {
-  margin-top: 1rem;
-  display: grid;
-  place-items: center;
-  align-items: center;
-
-
-  justify-content: center;
-}
-
-#reset2 {
-  display: none;
-
-
-
-}
-
-.controls2 button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  height: 15px;
-
-  color: whitesmoke;
-
-}
-
-.focused .pomocontainer2 {
-  opacity: 1;
-}
-
 
 
 /* Profile Page */
