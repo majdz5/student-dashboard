@@ -559,21 +559,26 @@ adjustDashboard();
 
 
 // Loading screen stuff
-
-
 function showLoadingScreen() {
   const loadingScreen = document.getElementById('loading-screen');
   const LoadingText1 = document.getElementById('loadingtext1');
   const LoadingText2 = document.getElementById('loadingtext2');
 
-setTimeout( () => {
-  LoadingText1.style.opacity = "95%";
-},800);
-setTimeout( () => {
-  LoadingText2.style.opacity = "95%";
-},2000);
+  if (sessionStorage.getItem('loadedOnce')) {
+    loadingScreen.classList.add('hidden');
+    return;
+  }
 
   setTimeout(() => {
-      loadingScreen.classList.add('hidden');
-  }, 6000); 
+    LoadingText1.style.opacity = "95%";
+  }, 800);
+
+  setTimeout(() => {
+    LoadingText2.style.opacity = "95%";
+  }, 2000);
+
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+    sessionStorage.setItem('loadedOnce', true);  // Hon we used a flag, we set it as true hon hek el condition Up is met
+  }, 6000);
 }

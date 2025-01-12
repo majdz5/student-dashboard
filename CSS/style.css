@@ -18,6 +18,7 @@
   --text-color: #000000;
   --primary-font: 'Quantify', sans-serif;
   --glassgradient: linear-gradient(120deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.8));
+  --secondary-text-color:rgba(3, 3, 3, 0.8 );
 }
 
 .dark-mode {
@@ -28,6 +29,8 @@
   --text-color: #e0dce7;
   --primary-font: 'Quantify', sans-serif;
   --glassgradient: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
+  --secondary-text-color:rgba(242, 237, 237, 0.5);
+
 }
 
 /* Font Face */
@@ -1270,6 +1273,7 @@ details {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   padding: 10px;
+  
 }
 
 .task-icon {
@@ -1294,7 +1298,7 @@ details {
 .task-details p {
   margin: 2px 0;
   font-size: 0.85rem;
-  color: #7e7c7c;
+  color:var(--secondary-text-color);
 }
 
 /* Focus Mode */
