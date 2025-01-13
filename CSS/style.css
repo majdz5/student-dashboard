@@ -1185,6 +1185,10 @@ iframe p {
   transition: all 0.3s ease-in-out;
 
 }
+.course box-icon{
+    transition: all 0.3s ease-in-out;
+
+}
 
 .course h3:hover {
   backdrop-filter: blur(20px);

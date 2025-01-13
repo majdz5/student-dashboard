@@ -300,7 +300,7 @@ function validateForm() {
 }
 
 
-
+// Courses Detail Toggle
 
 function toggleDetails(h3Element){
 
