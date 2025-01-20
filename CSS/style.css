@@ -674,6 +674,7 @@ input {
   cursor: pointer;
   position: relative;
   padding-top: 15px;
+  text-overflow: wrap;
 
 }
 
@@ -682,8 +683,6 @@ input {
   overflow-y: scroll;
   scrollbar-width: none;
   border-radius: 20px;
-
-
 
 }
 
@@ -704,7 +703,7 @@ input {
 
 
 .todocontainer ul li.checked {
-  color: #2e2c2c;
+  color: #837f7f;
   text-decoration: line-through;
 
 }
