@@ -295,7 +295,7 @@ function validateForm() {
 
   // If everything is valid
   formMessage.textContent = "Thank you for your message! We will get back to you soon.";
-  formMessage.style.color = "black";
+  formMessage.style.color = "white";
   return false;  // Simulate form submission for demo purposes
 }
 

@@ -10,6 +10,7 @@
 html{
   overflow-y: scroll;
   scrollbar-width:none; 
+
   }
 
   
@@ -142,6 +143,7 @@ nav::before {
   height: 100%;
   top: 0;
   left: 100%;
+  background: none;
 }
 /* Sidebar Top Section */
 .sidebar-top {
@@ -158,7 +160,6 @@ nav::before {
   background-color: var(--primary-color);
   border-radius: 3.6px;
   cursor: pointer;
-  box-shadow: 0 2.7px 9px -2.7px rgba(70, 46, 118, 0.3);
   right: -2.4rem;
   transform: translateY(-50%) translateX(-7px);
   opacity: 0;
@@ -398,7 +399,6 @@ nav:hover .shrink-btn,
   height: 25px;
   align-items: center;
   border-radius: 7px;
-  box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
@@ -486,10 +486,12 @@ body.shrink .search input {
     backdrop-filter: blur(20px);
   background: var(--glassgradient);
   position: relative;
-  margin: 1rem auto;
-  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 10vh;
+    flex-wrap: wrap;
   border-radius: 30px;
   perspective: 1000px;
+    
 }
 /* Center content section of the dashboard */
 .centercont{
